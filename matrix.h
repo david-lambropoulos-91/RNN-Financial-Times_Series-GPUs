@@ -1,4 +1,11 @@
-#include <cblas.h>
+#ifndef MATRIX_H
+#define MATRIX_H
+
+#include <mkl.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <stddef.h>
+#include <string.h>
 
 // represents user-supplied training data
 typedef struct DataSet_ 
@@ -93,3 +100,5 @@ static int equals(Matrix* A, Matrix* B);
 
 // frees a matrix and its data
 static void destroyMatrix(Matrix* matrix);
+
+#endif

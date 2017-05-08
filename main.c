@@ -2,6 +2,7 @@
 #include "rnn_serial.h"
 #include "rnn.h"
 
+
 int main(int argc, char** argv)
 {
 	print_success("Hello world!");
