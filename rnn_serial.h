@@ -1,7 +1,11 @@
+#ifndef __RNN_SERIAL_H
+#define __RNN_SERIAL_H
+
 #include "color_code_me.h"
 #include "math.h"
 #include "stdlib.h"
 #include "malloc.h"
+#include "activation.h"
 
 typedef struct neuron_
 {
@@ -18,7 +22,9 @@ typedef struct neuron_
 
 typedef struct rnn_
 {
-	
+	int num_layers;
+	neuron** neurons;
+	int manyLayers; 	
 } rnn;
 
 rnn* create_network();
@@ -28,4 +34,4 @@ void destroy_network(rnn* network);
 void train_network(rnn* network);
 
 
-
+#endif
